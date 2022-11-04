@@ -50,9 +50,26 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
-
-
+// let totalAcresArrayLength= fujiAcres.length + galaAcres.length + pinkAcres.length 
+let totalAcres = 0
+// for (let i=0; i>totalAcresArrayLength.length; i++){
+//     for(i=0; i<fujiAcres.length; i++) {
+//         totalAcres += fujiAcres[i];
+//     }for(i=0; i<galaAcres.length; i++) {
+//         totalAcres += galaAcres[i];
+//     }for(i=0; i<pinkAcres.length; i++) {
+//         totalAcres += pinkAcres[i];
+//     }
+// }
+for(i=0; i<fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i];
+}for(i=0; i<galaAcres.length; i++) {
+    totalAcres += galaAcres[i];
+}for(i=0; i<pinkAcres.length; i++) {
+    totalAcres += pinkAcres[i];
+}
+console.log(totalAcres);
+console.log('-------');
 
 
 // PROBLEM 2
@@ -68,7 +85,9 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
+let averageDailyAcres = totalAcres /7 // average is everything added divided by amount of days. so thats how i found average
+console.log(averageDailyAcres);
+console.log('-------');
 
 
 
@@ -105,8 +124,13 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
-
+// // CODE HERE
+while (acresLeft>0){ 
+    days++
+    acresLeft -= averageDailyAcres 
+}
+console.log(days);
+console.log('-------');
 
 
 // PROBLEM 4
@@ -134,15 +158,29 @@ let days = 0
 */
 
 // CODE HERE
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
+let fujiCopy = fujiAcres.slice(0) //copy for original so i dont edit original
+let galaCopy =galaAcres.slice(0)//copy for original so i dont edit original
+let pinkCopy =pinkAcres.slice(0)//copy for original so i dont edit original
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
 
 
 
-
-
+for(i=0; i<fujiCopy.length; i++){
+    fujiTons.push((fujiCopy[i] * 6.5)) //pushes or appends to fujiTons the index i of fujiCopy *6.5. Each acre is 6.5 tons
+}
+for(i=0; i<galaCopy.length; i++){
+    galaTons.push((galaCopy[i] * 6.5))//pushes or appends to galaTons the index i of galaCopy *6.5. Each acre is 6.5 tons
+}
+for(i=0; i<pinkCopy.length; i++){
+    pinkTons.push((pinkCopy[i] * 6.5))//pushes or appends to pinkTons the index i of pinkCopy *6.5. Each acre is 6.5 tons
+}
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
+console.log('------');
 
 // PROBLEM 5
 
@@ -162,11 +200,21 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds =0
+let galaPounds =0
+let pinkPounds =0
 
-
+for (i=0; i<fujiTons.length; i++) {
+    fujiPounds += fujiTons[i]*2000; // fujipouns is equal to fujitons index i *2000, each ton is 2000 pounds
+}for(i=0; i<galaTons.length; i++) {
+    galaPounds += galaTons[i]*2000;
+}for(i=0; i<pinkTons.length; i++) {
+    pinkPounds += pinkTons[i] *2000;
+}
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
+console.log('-------');
 
 
 
@@ -189,9 +237,13 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds *fujiPrice //profit is pounds * profit per pound
+let galaProfit = galaPounds*galaPrice
+let pinkProfit = pinkPounds*pinkPrice
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
+console.log('-------');
 
 
 
@@ -209,3 +261,6 @@ let days = 0
 */
 
 // CODE HERE
+totalProfit= galaProfit+fujiProfit+pinkProfit //total profit is all porfits combinded, so gala +fuji+pink profits combined
+console.log(totalProfit);
+console.log('-------');
