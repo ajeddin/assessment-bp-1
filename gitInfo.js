@@ -10,7 +10,7 @@
 */
 
 //CODE HERE
-
+const gitDefinition='The best way for version control and saving of your code. You use it to track changes on your code and push your code to sites like github'
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable called 'gitHubDefinition'.  
@@ -18,7 +18,7 @@
 */
 
 //CODE HERE
-
+const gitHubDefinition= 'GitHub works hand on hand with git, its a place to save your local git files online, and allows for collaboration of code. '
 //////////////////PROBLEM 3////////////////////
 /*
     Create a variable called 'gitInitDefinition'.  
@@ -26,7 +26,7 @@
 */
 
 //CODE HERE
-
+const gitInitDefinition = 'This initiates git in a speicific repo (folder) you chose/ git add . should be next'
 //////////////////PROBLEM 4////////////////////
 /*
     Create a variable called 'gitCloneDefinition'.  
@@ -34,7 +34,7 @@
 */
 
 //CODE HERE
-
+const gitCloneDefinition = ' This is used to clone a repo into a local repo, this can be from another local path or a url from a repo on github'
 //////////////////PROBLEM 5////////////////////
 /*
     Create a variable called 'gitStatusDefinition'.  
@@ -42,7 +42,7 @@
 */
 
 //CODE HERE
-
+const gitStatusDefinition = 'Shows the current status of files in a specific repo. THis can be showing which files are being tracked, which files are being pushed'
 //////////////////PROBLEM 6////////////////////
 /*
     Create a variable called 'gitAddDefinition'.  
@@ -53,7 +53,8 @@
 */
 
 //CODE HERE
-
+const gitAddDefinition = ' Basically you do this to selct files you want git to track doing git add . makes git track all files. this means your code now affects the code you added to be tracked.'
+const gitAddCode = 'git add .'
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  
@@ -64,12 +65,12 @@
 */
 
 //CODE HERE
-
-
+const gitCommitDefinition= 'Git commit basically commits your changes, this means it commits the changes your did with git add '
+const gitCommitCode = "git commit -m 'initial commit'"
 //////////////////PROBLEM 8////////////////////
 /*
     Create a variable called 'gitPushDefinition'.  
     It should be a string containing your best definition of what 'git push' does.
 */
-
 //CODE HERE
+const gitPushDefinition= 'Basically this is used to push code to git hub or the site u used, this means the commited changes are pushed to the cloud repo'
